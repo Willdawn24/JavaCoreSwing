@@ -18,7 +18,7 @@ public class DrawTest {
 }
 
 class DrawFrame extends  JFrame{
-    public DrawFrame() throws HeadlessException {
+    DrawFrame() throws HeadlessException {
         add(new DrawComponent());
         pack();
     }
@@ -37,6 +37,8 @@ class DrawComponent extends JComponent{
 
         Rectangle2D rect = new Rectangle2D.Double(leftX, topY, width, height);
         g2.draw(rect);
+        g2.setPaint(Color.RED);
+        g2.fill(rect);
 
         Ellipse2D ellipse2D = new Ellipse2D.Double();
         ellipse2D.setFrame(rect);
